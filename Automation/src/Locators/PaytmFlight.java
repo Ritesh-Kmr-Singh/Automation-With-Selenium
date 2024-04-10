@@ -57,17 +57,18 @@ public class PaytmFlight {
         System.out.println(flightsearch1 + "  ticket price is ==  " +  flight);
         
       
+       /** 
+        to fetch all flight detail
         
-        //to fetch all flight detail
-        
-        // List<WebElement> flightprice= driver.findElements(By.className("_1O_uQ"));
+         List<WebElement> Allflightprice= driver.findElements(By.className("_1O_uQ"));
          
-         //with the help of for loop we can fetch the multiple flight detail
-         //for(int i=0;i<flightprice.size();i++)
-         //{
-        	//System.out.println(flightprice.get(i).getText());
-        	//System.out.println("====================================");
-         //}
+         with the help of for loop we can fetch the multiple flight detail
+         for(int i=0;i<Allflightprice.size();i++)
+         {
+        	System.out.println(Allflightprice.get(i).getText());
+        	System.out.println("====================================");
+         }
+	**/
 	}
 }
 

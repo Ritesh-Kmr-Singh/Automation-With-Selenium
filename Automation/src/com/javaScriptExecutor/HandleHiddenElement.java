@@ -1,5 +1,6 @@
 package com.javaScriptExecutor;
 
+import java.sql.Time;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
@@ -8,25 +9,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class ScrollTillParticularWebElement {
+public class HandleHiddenElement {
 	public static void main(String[] args) {
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 		
-		driver.get("https://www.zomato.com/india");
+		driver.get("https://www.facebook.com/r.php?locale=en_GB&display=page");
 		
-		WebElement Kolkata = driver.findElement(By.xpath("//h5[text()='Kolkata Restaurants']"));
+		WebElement Optional = driver.findElement(By.name("custom_gender"));
 		
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		
-		//  if we use (true) then it will show in the top of the web page 
-		//js.executeScript("arguments[0].scrollIntoView(true)", jamshedpur);
-		
-		//		//  if we use (false) then it will show in the top of the web page 
-		js.executeScript("arguments[0].scrollIntoView(false)", Kolkata);
-
+		js.executeScript("arguments[0].value='Transgender'", Optional);
 	}
 
 }

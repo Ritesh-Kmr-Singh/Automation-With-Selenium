@@ -22,7 +22,8 @@ public class Zomato {
 		driver.findElement(By.xpath("//input[@class=\"SearchBarContainer__Input-sc-hl8pft-3 irVxjq\"]")).sendKeys("sugar",Keys.ENTER);
 	    Thread.sleep(2000);
 		driver.findElement(By.xpath("(//div[@class=\"AddToCart__UpdatedButtonContainer-sc-17ig0e3-0 lmopxc\"])[1]")).click();
-	    WebElement product = driver.findElement(By.xpath("//div[@class=\"AddToCart__AddMinusIcon-sc-17ig0e3-9 dtDpfZ\"]"));
+	    
+		WebElement product = driver.findElement(By.xpath("//div[@class=\"AddToCart__AddMinusIcon-sc-17ig0e3-9 dtDpfZ\"]"));
 		for(int i=0;i<3;i++)
 	    {
 	    	product.click();
